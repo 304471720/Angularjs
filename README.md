@@ -1,2 +1,2 @@
 # angularjs-
-学习angularjs
+开始学习angularjs
