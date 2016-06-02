@@ -9,7 +9,7 @@ cartModule.controller('cartCtr', ['$scope', function ($scope) {
             id: 10001,
             title: "Web全栈工程师的自我修养 余果",
             price: 40.80,
-            quantity: 2,
+            quantity: 2, //购买数量
             linkUrl: "https://detail.tmall.com/item.htm?spm=a1z0d.6639537.1997196601.4.cwywJs&id=532166746631"
         },
         {
