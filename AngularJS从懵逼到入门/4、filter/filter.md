@@ -1,5 +1,5 @@
-　　angular中filter过滤器主要有两个作用：**格式化数据**和**过滤数据**。filter组件共有以下几种：1、currency 2、number 3、date 4、json 5、lowercase 6、uppercase 7、limitTo 8、orderBy 9、filter。
-官方API：https://code.angularjs.org/1.4.0-rc.2/docs/api/ng/filter
+　　angular中filter过滤器主要有两个作用：**格式化数据**和**过滤数据**。filter组件共有以下几种：1、currency 2、number 3、date 4、json 5、lowercase 6、uppercase 7、limitTo 8、orderBy 9、filter。   
+　　官方API：https://code.angularjs.org/1.4.0-rc.2/docs/api/ng/filter
 ##### 一 、currency　　
 `{{ currency_expression | currency : symbol : fractionSize}}`
 currency的作用是将值转换为精确小数点的数字，同时在前面添加货币符号，如果**值不能转化为数字，会返回空字符**
