@@ -7,6 +7,9 @@ var myApp=angular.module('myApp',[],['$compileProvider','$controllerProvider',fu
     //2、没有replace或者false，模板的内容会嵌入到标签内，替换原来标签的内容
     //3、replace为true，模板的内容会替换此标签，但是当为C、A时会给模板添加对应的class、attribute
     //4、当replace为true时，模板中的内容必须包含在一个标签中，例如：如果直接是一个字符串“angular"就会报错
+    //5、transclude包含标签原有的数据，将原有的数据嵌入到ng-transclude标签中
+    //6、priority优先级，数字越大优先级越高，默认0，默认指令从左到右顺序执行，ng-repeat默认为1000
+    //7、terminal为true时，priority<0的指令不执行
     $compileProvider.directive('testNoReplace',function(){
         return{
             restrict:'ECA',
@@ -28,10 +31,19 @@ var myApp=angular.module('myApp',[],['$compileProvider','$controllerProvider',fu
         $scope.hi="How are you";
     }])
 }]);
-myApp.directive('templateurl',function(){
+myApp
+    .directive('templateurl',function(){
     return{
         restrict:'E',
         templateUrl:'a.html',
         replace:true
+    }
+})
+.directive('transclude',function(){
+    return{
+        restrict:'E',
+        template:'<div>这是新数据,下面是旧的数据<br/><div ng-transclude></div></div>',
+        replace:true,
+        transclude:true
     }
 })
