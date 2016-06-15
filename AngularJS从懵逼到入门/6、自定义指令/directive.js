@@ -19,7 +19,7 @@ var myApp=angular.module('myApp',[],['$compileProvider','$controllerProvider',fu
     });
     $compileProvider.directive('testReplace',function(){
         return{
-            restrict:'ECA',
+            restrict:'ECAM',
             template:'<div>哈哈哈，测试，replace为true</div>',
             replace:true
         }
