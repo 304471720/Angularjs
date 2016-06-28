@@ -32,7 +32,7 @@ var myApp=angular.module('myApp',[],['$compileProvider','$controllerProvider',fu
     }])
 }]);
 myApp
-    .directive('templateurl',function(){
+    .directive('templateurls',function(){
     return{
         restrict:'E',
         templateUrl:'a.html',
